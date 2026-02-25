@@ -2,6 +2,9 @@
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Version](https://img.shields.io/badge/Version-v1.0-orange.svg)
+## Documentation
+
+- [Architecture Overview](docs/ARCHITECTURE.md)
 # Offboarding Automation (PowerShell WinForms) - v1
 
 ## 🇬🇧 English
