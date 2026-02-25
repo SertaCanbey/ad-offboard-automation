@@ -1,0 +1,13 @@
+# Windows system files
+Thumbs.db
+Desktop.ini
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+*.tmp
+
+# PowerShell history
+ConsoleHost_history.txt
