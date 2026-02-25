@@ -530,7 +530,7 @@ function Invoke-WithRetry {
 }
 
 # Purview PST (Search only)
-# Purview PST (Search only)
+
 function Start-OffboardPurviewMailboxSearch {
     param(
         [string]$Mailbox,
@@ -561,7 +561,7 @@ function Start-OffboardPurviewMailboxSearch {
 }
 
 # AD Organization cleanup (Manager + direct reports)
-# AD Organization cleanup (Manager + direct reports)
+
 function Invoke-ADOrganizationCleanup {
     param([string]$SamAccountName)
 
@@ -851,11 +851,28 @@ $cmbLang.Add_SelectedIndexChanged({
     Apply-Language
 })
 
-# Baslangic
+
 Set-ActionButtonsEnabled $false
 Write-Log (T "LogReady") "Cyan"
 
 $Form.Add_Shown({ Set-FormRoundedCorners -Form $Form -Radius 20; Apply-Language })
 $Form.Add_Resize({ Set-FormRoundedCorners -Form $Form -Radius 20 })
+
+$lblAuthorTop = New-Object System.Windows.Forms.Label
+$lblAuthorTop.Text = "Sertac Canbey"
+$lblAuthorTop.AutoSize = $true
+$lblAuthorTop.Font = New-Object System.Drawing.Font("Segoe UI", 8)
+$lblAuthorTop.ForeColor = [System.Drawing.Color]::DimGray
+$lblAuthorTop.Cursor = [System.Windows.Forms.Cursors]::Hand
+
+
+$lblAuthorTop.Location = New-Object System.Drawing.Point(780, 12)
+
+$topBar.Controls.Add($lblAuthorTop)
+$lblAuthorTop.BringToFront()
+
+$lblAuthorTop.Add_MouseEnter({ $lblAuthorTop.ForeColor = [System.Drawing.Color]::RoyalBlue })
+$lblAuthorTop.Add_MouseLeave({ $lblAuthorTop.ForeColor = [System.Drawing.Color]::DimGray })
+$lblAuthorTop.Add_Click({ Start-Process "https://www.linkedin.com/in/sertac-canbey" })
 
 [void]$Form.ShowDialog()
